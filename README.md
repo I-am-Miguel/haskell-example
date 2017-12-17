@@ -24,3 +24,8 @@ Execute as funções do arquivo carregado
 *Main> soma(10)
 55
 ~~~~
+Sair
+~~~~bash
+*Main> :q
+$
+~~~~
