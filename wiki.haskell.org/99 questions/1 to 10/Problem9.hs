@@ -8,7 +8,7 @@ agrupa (x:xs) =  ([x] ++ (agrupa[a | a <- xs, a==x] ++ agrupa [a | a <- xs, a/=x
 {-Função pack descrita no Problem9-}
 pack :: [Char] -> [[Char]]
 
-pack [] = [[]]
+pack [] = []
 pack (x:[]) = [[x]]
 
-pack (x:xs) = [x:[a | a <- xs, a == x]] ++ pack [a | a <- xs, a /=x]
+pack (x:xs) = [x:[a | a <- xs, xs /= [], a == x]] ++ pack [a | a <- xs, a /=x]
