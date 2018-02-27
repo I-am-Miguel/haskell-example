@@ -1,3 +1,5 @@
+module Problem1 where
+
 myLast :: [t] -> t
 
 myLast [x] = x

@@ -1,3 +1,4 @@
+module Problem2 where
 {-
 	Função deve mostrar o penultimo valor de uma lista
 	Para isso 1° Inverte a lista atual, após retorna o elemento da posição 1	

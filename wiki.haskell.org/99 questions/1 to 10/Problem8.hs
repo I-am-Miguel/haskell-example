@@ -1,3 +1,4 @@
+module Problem8 where
 {-
 	Comprimir as Strings tornando-as em um conjunto(sem repetições)
 -}

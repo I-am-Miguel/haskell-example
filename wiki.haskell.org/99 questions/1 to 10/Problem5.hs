@@ -1,5 +1,4 @@
-myReverse :: [t] -> [t]
+module Problem5 where
+import Problem2
 
-myReverse [] = []
-
-myReverse (x:xs) = (myReverse xs) ++[x]
+myReverse  = inverte
