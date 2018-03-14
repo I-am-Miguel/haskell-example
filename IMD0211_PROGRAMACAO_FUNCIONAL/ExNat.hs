@@ -37,7 +37,9 @@ instance Eq Nat where
 
 instance Ord Nat where
 
-    (<=) = undefined
+    (<=) Zero _ = True
+    (<=) (Succ _) Zero = False
+    (<=) (Succ x) (Succ y) = (<=) x y
 
     -- Ord does not require defining min and max.
     -- Howevener, you should define them without using (<=).
@@ -65,14 +67,17 @@ odd = not . even
 
 -- addition
 (<+>) :: Nat -> Nat -> Nat
-(<+>) = undefined
+(<+>) Zero x = x
+(<+>) x Zero = x
+(<+>) (Succ n) y = Succ ((<+>) n y)
 
 -- This is called the dotminus or monus operator
 -- (also: proper subtraction, arithmetic subtraction, ...).
 -- It behaves like subtraction, except that it returns 0
 -- when subtraction returns a negative number.
 (<->) :: Nat -> Nat -> Nat
-(<->) = undefined
+(<->) x Zero = x
+(<->) (Succ x) (Succ y) = (<->) x y   
 
 -- multiplication
 (<*>) :: Nat -> Nat -> Nat
